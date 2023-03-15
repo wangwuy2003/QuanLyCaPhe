@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyQuanCaPhe
 {
@@ -15,6 +16,13 @@ namespace QuanLyQuanCaPhe
         public fAdmin()
         {
             InitializeComponent();
+            loadAccountList();
+
+        }
+
+        void loadAccountList()
+        {
+            SqlConnection
         }
 
         private void dtpkToDate_ValueChanged(object sender, EventArgs e)
