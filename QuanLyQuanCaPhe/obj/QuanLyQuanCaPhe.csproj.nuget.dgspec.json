@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj": {}
+    "F:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj": {}
   },
   "projects": {
-    "D:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj": {
+    "F:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj",
+        "projectUniqueName": "F:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj",
         "projectName": "QuanLyQuanCaPhe",
-        "projectPath": "D:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\obj\\",
+        "projectPath": "F:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj",
+        "packagesPath": "C:\\Users\\Phong\\.nuget\\packages\\",
+        "outputPath": "F:\\QuanLyCaPhe\\QuanLyQuanCaPhe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Phong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
