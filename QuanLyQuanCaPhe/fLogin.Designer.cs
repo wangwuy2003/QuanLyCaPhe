@@ -38,6 +38,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -150,6 +151,21 @@
             this.close.BackColorChanged += new System.EventHandler(this.pictureBox5_Click_1);
             this.close.Click += new System.EventHandler(this.pictureBox5_Click_1);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(622, 331);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(279, 37);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Thoát";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // fLogin
             // 
             this.AcceptButton = this.btnDangNhap;
@@ -157,7 +173,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(925, 497);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.close);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -198,5 +216,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox close;
+        private Button button1;
     }
 }

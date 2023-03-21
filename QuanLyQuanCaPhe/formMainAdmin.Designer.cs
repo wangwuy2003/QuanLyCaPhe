@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMainAdmin));
-            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel_Left = new System.Windows.Forms.Panel();
+            this.btnNhanVien = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.btnDoanhThu = new System.Windows.Forms.Button();
@@ -49,16 +49,11 @@
             this.panel_Left.SuspendLayout();
             this.SuspendLayout();
             // 
-            // sqlCommand1
-            // 
-            this.sqlCommand1.CommandTimeout = 30;
-            this.sqlCommand1.EnableOptimizedParameterBinding = false;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(12, 572);
+            this.panel6.Location = new System.Drawing.Point(12, 565);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(152, 55);
             this.panel6.TabIndex = 5;
@@ -100,6 +95,7 @@
             // panel_Left
             // 
             this.panel_Left.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel_Left.Controls.Add(this.btnNhanVien);
             this.panel_Left.Controls.Add(this.tableLayoutPanel1);
             this.panel_Left.Controls.Add(this.btnTaiKhoan);
             this.panel_Left.Controls.Add(this.btnDoanhThu);
@@ -111,9 +107,24 @@
             this.panel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Left.Location = new System.Drawing.Point(0, 0);
             this.panel_Left.Name = "panel_Left";
-            this.panel_Left.Size = new System.Drawing.Size(181, 669);
+            this.panel_Left.Size = new System.Drawing.Size(181, 628);
             this.panel_Left.TabIndex = 0;
             this.panel_Left.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.BackColor = System.Drawing.Color.LightPink;
+            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 380);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Size = new System.Drawing.Size(181, 53);
+            this.btnNhanVien.TabIndex = 15;
+            this.btnNhanVien.Text = "👨‍👩‍👦‍👦 Nhân Viên";
+            this.btnNhanVien.UseVisualStyleBackColor = false;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -184,7 +195,7 @@
             this.btnThucDon.Name = "btnThucDon";
             this.btnThucDon.Size = new System.Drawing.Size(181, 53);
             this.btnThucDon.TabIndex = 11;
-            this.btnThucDon.Text = "🍷 Quản lý";
+            this.btnThucDon.Text = "🍷 Đồ uống";
             this.btnThucDon.UseVisualStyleBackColor = false;
             this.btnThucDon.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -218,20 +229,20 @@
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Body.Location = new System.Drawing.Point(181, 58);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(960, 611);
+            this.panel_Body.Size = new System.Drawing.Size(960, 570);
             this.panel_Body.TabIndex = 2;
             this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
             // 
-            // tablemanager
+            // formMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1141, 669);
+            this.ClientSize = new System.Drawing.Size(1141, 628);
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_Left);
-            this.Name = "tablemanager";
+            this.Name = "formMainAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.TopMost = true;
@@ -247,7 +258,6 @@
         }
 
         #endregion
-        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private Panel panel6;
         private Label label5;
         private PictureBox pictureBox5;
@@ -261,5 +271,6 @@
         private Panel panel1;
         private Panel panel_Body;
         private TableLayoutPanel tableLayoutPanel1;
+        private Button btnNhanVien;
     }
 }

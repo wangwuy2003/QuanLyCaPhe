@@ -14,7 +14,7 @@ namespace QuanLyQuanCaPhe
         public Modify()
         {
         }
-        SqlDataAdapter dataAdapter;
+        SqlDataAdapter dataAdapter; // truy xuat du lieu vao dataTable
         SqlCommand sqlCommand; // dung de truy van cac cau lenh insert, update, delete...
         SqlDataReader dataReader; // dung de doc du lieu trong bang
 
@@ -30,6 +30,7 @@ namespace QuanLyQuanCaPhe
             }
             return dataTable;
         }
+
         public void Command(string query)// dung de them, sua, xoa
         {
             using (SqlConnection sqlConnection = Connection.getSqlConnection())
@@ -58,22 +59,102 @@ namespace QuanLyQuanCaPhe
             return taiKhoans;
 
         }
-        public List<DoUong> DoUongs(string query)
+
+
+        //dataTable tra ve 1 bang
+        //lay du lieu nhan vien
+        public DataTable getAllNhanVien()
         {
-            List<DoUong> doUongs = new List<DoUong>();
-            using (SqlConnection sqlConnection = Connection.getSqlConnection())
+            DataTable dataTable = new DataTable();
+            string query = "select * from NhanVien";
+            using(SqlConnection sqlConnection = Connection.getSqlConnection())
+            {               
+                sqlConnection.Open();
+                dataAdapter = new SqlDataAdapter(query, sqlConnection);
+                dataAdapter.Fill(dataTable);
+                sqlConnection.Close();
+            }
+            return dataTable;
+        }
+
+        public bool insert(NhanVien nhanvien)
+        {
+            SqlConnection sqlConnection = Connection.getSqlConnection();
+            //string query = "insert into NhanVien values (" + nhanvien.MaNV + ", N'" + nhanvien.tenNV + "', N'" + nhanvien.GioiTinh + "', '" + nhanvien.NgaySinh + "', '" + nhanvien.SoDienThoai + "')";
+            string query = "insert into NhanVien values (@maNV, @tenNV, @gioiTinh, @ngaySinh, @soDienThoai)";
+            try
             {
                 sqlConnection.Open();
                 sqlCommand = new SqlCommand(query, sqlConnection);
-                dataReader = sqlCommand.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    doUongs.Add(new DoUong(dataReader.GetString(1), dataReader.GetFloat(3)));
-                }
+                sqlCommand.Parameters.Add("@maNV", SqlDbType.VarChar).Value = nhanvien.MaNV;
+                sqlCommand.Parameters.Add("@tenNV", SqlDbType.VarChar).Value = nhanvien.TenNV;
+                sqlCommand.Parameters.Add("@gioiTinh", SqlDbType.VarChar).Value = nhanvien.GioiTinh;
+                sqlCommand.Parameters.Add("@ngaySinh", SqlDbType.VarChar).Value = nhanvien.NgaySinh.ToShortDateString(); // chỉ lấy ngày tháng năm
+                sqlCommand.Parameters.Add("@soDienThoai", SqlDbType.VarChar).Value = nhanvien.SoDienThoai;
+                sqlCommand.ExecuteNonQuery();//thuc thi lenh truy van
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
                 sqlConnection.Close();
             }
-            return doUongs;
+            return true;
+        }
 
+        public bool update(NhanVien nhanvien)
+        {
+            SqlConnection sqlConnection = Connection.getSqlConnection();
+            string query = "update NhanVien set tenNV = @tenNV, gioiTinh = @gioiTinh, ngaySinh = @ngaySinh, soDienThoai = @soDienThoai where maNV = @maNV";
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.Parameters.Add("@maNV", SqlDbType.VarChar).Value = nhanvien.MaNV;
+                sqlCommand.Parameters.Add("@tenNV", SqlDbType.NVarChar).Value = nhanvien.TenNV;
+                sqlCommand.Parameters.Add("@gioiTinh", SqlDbType.NVarChar).Value = nhanvien.GioiTinh;
+                sqlCommand.Parameters.Add("@ngaySinh", SqlDbType.VarChar).Value = nhanvien.NgaySinh.ToShortDateString(); // chỉ lấy ngày tháng năm
+                sqlCommand.Parameters.Add("@soDienThoai", SqlDbType.VarChar).Value = nhanvien.SoDienThoai;
+                sqlCommand.ExecuteNonQuery();//thuc thi lenh truy van
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+            return true;
+        }
+
+        //delete function nhanvien
+        public bool delete(string ma)
+        {
+            SqlConnection sqlConnection = Connection.getSqlConnection();
+            string query = "delete NhanVien where maNV = @maNV";
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.Parameters.Add("@maNV", SqlDbType.VarChar).Value = ma;
+                sqlCommand.ExecuteNonQuery();//thuc thi lenh truy van
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+            return true;
         }
     }
 }
+
+
+// sql có thể chứa thêm tham số, tham số trong chuỗi câu lệnh được ký hiệu @+tên tham số
+// gán tham số = sqlcommand, sqldbtype là xác định dữ liệu kiểu thuộc tính trong database

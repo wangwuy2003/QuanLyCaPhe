@@ -47,6 +47,7 @@
             this.thanhtien = new System.Windows.Forms.ColumnHeader();
             this.txbTongTien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,6 +70,7 @@
             // panel_left
             // 
             this.panel_left.AutoScroll = true;
+            this.panel_left.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel_left.Controls.Add(this.dataGridView1);
             this.panel_left.Controls.Add(this.groupBox2);
             this.panel_left.Dock = System.Windows.Forms.DockStyle.Left;
@@ -85,12 +87,12 @@
             this.ma,
             this.tenDoUong,
             this.giaBan});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(511, 454);
+            this.dataGridView1.Size = new System.Drawing.Size(511, 466);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -121,6 +123,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LavenderBlush;
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txb_TimKiem);
@@ -163,6 +166,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.listView1);
             this.panel2.Controls.Add(this.txbTongTien);
             this.panel2.Controls.Add(this.label1);
@@ -225,11 +229,22 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tổng tiền:";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightPink;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(303, 500);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 60);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Thanh toán";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // formHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(944, 572);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -268,5 +283,6 @@
         private ColumnHeader soluong;
         private ColumnHeader gia;
         private ColumnHeader thanhtien;
+        private Button button1;
     }
 }

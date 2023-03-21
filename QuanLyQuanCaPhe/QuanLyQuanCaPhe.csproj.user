@@ -28,5 +28,8 @@
     <Compile Update="formMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

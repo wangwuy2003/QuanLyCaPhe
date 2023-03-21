@@ -136,5 +136,15 @@ namespace QuanLyQuanCaPhe
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new formNhanVien());
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formNhanVien());
+        }
     }
 }

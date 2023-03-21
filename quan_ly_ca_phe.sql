@@ -86,3 +86,20 @@ values (N'ad', 'admin', '1', 1),
 
 delete from TaiKhoan
 select * from TaiKhoan
+
+create table NhanVien(
+maNV varchar(100) not null primary key,
+tenNV nvarchar(100) not null,
+gioiTinh nvarchar(10) not null,
+ngaySinh date,
+soDienThoai char(10)
+)
+
+insert into NhanVien values
+('NV01', N'Nguyễn Quang Huy', 'Nam', '2003-04-03', '0967708254'),
+('NV02', N'Nguyễn Thùy Linh', N'Nữ', '2000-05-12', '0967708554'),
+('NV03', N'Nguyễn Đăng Huy', 'Nam', '2003-04-01', '0967704254'),
+('NV04', N'Nguyễn Hoàng Huy', 'Nam', '2003-12-03', '0967908254')
+
+delete from NhanVien
+drop table NhanVien

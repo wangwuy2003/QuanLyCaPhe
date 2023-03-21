@@ -50,12 +50,14 @@ namespace QuanLyQuanCaPhe
         {
         }
 
+
         Modify modify= new Modify();
         //dang nhap
         private void button1_Click(object sender, EventArgs e)
         {
             string tenTK = txbTaiKhoan.Text;
             string matKhau = txbMatKhau.Text;
+
             if (tenTK.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập tài khoản!");
@@ -66,7 +68,7 @@ namespace QuanLyQuanCaPhe
             }
             else
             {
-                string query = "select * from TaiKhoan where tenHienThi = '" + tenTK + "' and matKhau = '" + matKhau + "'";
+                string query = "select * from TaiKhoan where tenHienThi = '" + tenTK + "' and matKhau = '" + matKhau + "' ";
                 if(modify.taiKhoans(query).Count > 0) 
                 {
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -81,7 +83,6 @@ namespace QuanLyQuanCaPhe
                     MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-
 
         }
 
@@ -106,6 +107,11 @@ namespace QuanLyQuanCaPhe
         }
 
         private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
