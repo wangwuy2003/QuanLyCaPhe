@@ -103,3 +103,4 @@ insert into NhanVien values
 
 delete from NhanVien
 drop table NhanVien
+select * from NhanVien

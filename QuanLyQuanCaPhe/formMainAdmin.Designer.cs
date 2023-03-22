@@ -53,9 +53,10 @@
             // 
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(12, 565);
+            this.panel6.Location = new System.Drawing.Point(14, 753);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(152, 55);
+            this.panel6.Size = new System.Drawing.Size(174, 73);
             this.panel6.TabIndex = 5;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
@@ -63,9 +64,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(44, 18);
+            this.label5.Location = new System.Drawing.Point(50, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 25);
+            this.label5.Size = new System.Drawing.Size(127, 32);
             this.label5.TabIndex = 1;
             this.label5.Text = "Đăng xuất";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -73,9 +74,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(14, 16);
+            this.pictureBox5.Location = new System.Drawing.Point(16, 21);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.Size = new System.Drawing.Size(34, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -85,8 +87,9 @@
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(181, 115);
+            this.pictureBox7.Size = new System.Drawing.Size(207, 153);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 9;
             this.pictureBox7.TabStop = false;
@@ -106,8 +109,9 @@
             this.panel_Left.Controls.Add(this.panel6);
             this.panel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Left.Location = new System.Drawing.Point(0, 0);
+            this.panel_Left.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_Left.Name = "panel_Left";
-            this.panel_Left.Size = new System.Drawing.Size(181, 628);
+            this.panel_Left.Size = new System.Drawing.Size(207, 837);
             this.panel_Left.TabIndex = 0;
             this.panel_Left.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -118,9 +122,10 @@
             this.btnNhanVien.FlatAppearance.BorderSize = 0;
             this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNhanVien.Location = new System.Drawing.Point(0, 380);
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 508);
+            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(181, 53);
+            this.btnNhanVien.Size = new System.Drawing.Size(207, 71);
             this.btnNhanVien.TabIndex = 15;
             this.btnNhanVien.Text = "👨‍👩‍👦‍👦 Nhân Viên";
             this.btnNhanVien.UseVisualStyleBackColor = false;
@@ -131,12 +136,13 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(181, 168);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(207, 224);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 501);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(616, 668);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnTaiKhoan
@@ -146,9 +152,10 @@
             this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
             this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 327);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 437);
+            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.Size = new System.Drawing.Size(181, 53);
+            this.btnTaiKhoan.Size = new System.Drawing.Size(207, 71);
             this.btnTaiKhoan.TabIndex = 14;
             this.btnTaiKhoan.Text = "👦 Tài khoản";
             this.btnTaiKhoan.UseVisualStyleBackColor = false;
@@ -161,9 +168,10 @@
             this.btnDoanhThu.FlatAppearance.BorderSize = 0;
             this.btnDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoanhThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDoanhThu.Location = new System.Drawing.Point(0, 274);
+            this.btnDoanhThu.Location = new System.Drawing.Point(0, 366);
+            this.btnDoanhThu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDoanhThu.Name = "btnDoanhThu";
-            this.btnDoanhThu.Size = new System.Drawing.Size(181, 53);
+            this.btnDoanhThu.Size = new System.Drawing.Size(207, 71);
             this.btnDoanhThu.TabIndex = 13;
             this.btnDoanhThu.Text = "$ Doanh thu";
             this.btnDoanhThu.UseVisualStyleBackColor = false;
@@ -176,9 +184,10 @@
             this.btnDanhMuc.FlatAppearance.BorderSize = 0;
             this.btnDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDanhMuc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDanhMuc.Location = new System.Drawing.Point(0, 221);
+            this.btnDanhMuc.Location = new System.Drawing.Point(0, 295);
+            this.btnDanhMuc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDanhMuc.Name = "btnDanhMuc";
-            this.btnDanhMuc.Size = new System.Drawing.Size(181, 53);
+            this.btnDanhMuc.Size = new System.Drawing.Size(207, 71);
             this.btnDanhMuc.TabIndex = 12;
             this.btnDanhMuc.Text = "📖 Danh mục";
             this.btnDanhMuc.UseVisualStyleBackColor = false;
@@ -191,9 +200,10 @@
             this.btnThucDon.FlatAppearance.BorderSize = 0;
             this.btnThucDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThucDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnThucDon.Location = new System.Drawing.Point(0, 168);
+            this.btnThucDon.Location = new System.Drawing.Point(0, 224);
+            this.btnThucDon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThucDon.Name = "btnThucDon";
-            this.btnThucDon.Size = new System.Drawing.Size(181, 53);
+            this.btnThucDon.Size = new System.Drawing.Size(207, 71);
             this.btnThucDon.TabIndex = 11;
             this.btnThucDon.Text = "🍷 Đồ uống";
             this.btnThucDon.UseVisualStyleBackColor = false;
@@ -206,9 +216,10 @@
             this.btnHoaDon.FlatAppearance.BorderSize = 0;
             this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnHoaDon.Location = new System.Drawing.Point(0, 115);
+            this.btnHoaDon.Location = new System.Drawing.Point(0, 153);
+            this.btnHoaDon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Size = new System.Drawing.Size(181, 53);
+            this.btnHoaDon.Size = new System.Drawing.Size(207, 71);
             this.btnHoaDon.TabIndex = 10;
             this.btnHoaDon.Text = "📃 Menu";
             this.btnHoaDon.UseVisualStyleBackColor = false;
@@ -218,30 +229,33 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.RosyBrown;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(181, 0);
+            this.panel1.Location = new System.Drawing.Point(207, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 58);
+            this.panel1.Size = new System.Drawing.Size(1091, 77);
             this.panel1.TabIndex = 1;
             // 
             // panel_Body
             // 
             this.panel_Body.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Body.Location = new System.Drawing.Point(181, 58);
+            this.panel_Body.Location = new System.Drawing.Point(207, 77);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(960, 570);
+            this.panel_Body.Size = new System.Drawing.Size(1091, 760);
             this.panel_Body.TabIndex = 2;
             this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
             // 
             // formMainAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1141, 628);
+            this.ClientSize = new System.Drawing.Size(1298, 837);
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_Left);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "formMainAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
